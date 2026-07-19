@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn Kỹ thuật iOS 16.x - TechFix Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        .step-card:hover {
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .island-preview {
+            background: #000;
+            border-radius: 20px;
+            width: 120px;
+            height: 35px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header -->
+    <header class="header-gradient sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                     <a href="https://0836999012.github.io/apple/" class="text-2xl font-semibold tracking-tight text-gray-800 flex items-center">
+
+              <img src="logo.jpg" class="w-6 h-6 mr-2" alt="Logo">
+
+                TSoft Mobile & PC
+
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="https://www.mediafire.com/file/p4yst8j46yx2sht/Remote_Connection_Support_byThanhTam.rar/file" 
+                   class="bg-gray-100 px-4 py-2 rounded-full text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition" 
+                   target="_blank">Hỗ trợ từ xa</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        
+        <!-- Tab Navigation -->
+        <div class="flex justify-center space-x-2 mb-12 bg-slate-200/50 p-1 rounded-xl w-fit mx-auto">
+            <button onclick="showSection('icloud')" id="btn-icloud" class="px-6 py-2 rounded-lg font-medium transition-all bg-white shadow-sm text-blue-600">Xóa ẩn iCloud</button>
+            <button onclick="showSection('dynamic')" id="btn-dynamic" class="px-6 py-2 rounded-lg font-medium transition-all text-slate-600 hover:bg-white/50">Dynamic Island</button>
+        </div>
+
+        <!-- SECTION 1: XÓA ẨN ICLOUD -->
+        <div id="section-icloud">
+            <section class="text-center mb-12">
+                <span class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-blue-700 uppercase bg-blue-100 rounded-full">Kỹ thuật nâng cao</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Hướng dẫn <span class="gradient-text">Xóa Ẩn iCloud</span><br>cho iOS 16.x</h1>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">Phương pháp lợi dụng lỗi có tên là CVE-2022-46689, còn có tên mã là MacDirtyCow, người dùng có thể xóa mã giới hạn và ân tài khoản iCloud để đăng nhập icloud mới vào dùng không giới hạn (Đây không phải là OFF FMI nên không được reset nhe).</p>
+            </section>
+
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl mb-12 flex items-start space-x-4 shadow-sm">
+                <div class="text-amber-500 mt-1"><i class="fa-solid fa-triangle-exclamation text-2xl"></i></div>
+                <div>
+                    <h3 class="font-bold text-amber-800 text-lg">Lưu ý quan trọng</h3>
+                    <p class="text-amber-700 leading-relaxed">Đảm bảo đã sao lưu dữ liệu. Chúng tôi không chịu trách nhiệm cho rủi ro khi can thiệp hệ thống.</p>
+                </div>
+            </div>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold mb-6 flex items-center"><i class="fa-solid fa-list-check mr-3 text-blue-600"></i> Các bước thực hiện</h2>
+                
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-600"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Tải và cài đăt Filza thông Scalet</h3>
+                            <p class="text-slate-600"><a href="https://www.mediafire.com/file/um0hxmp4qycalsj/filzaescaped16.ipa/file"> FilzaEscaped iOS 16</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-purple-600"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Xoá Mã Giới Hạn</h3>
+                            <p class="text-slate-600 mb-3">Mở Fillza, chọn "Go to" và nhập đường dẫn chính xác sau:</p>
+                            <code class="block bg-slate-900 text-purple-300 p-4 rounded-lg text-sm break-all font-mono">
+                                root/var/mobile/Library/Preferences/com.apple.ScreenTimeAgent.plist
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-green-600"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</span>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Xóa iCloud</h3>
+                            <p class="text-slate-600 mb-3">Mở Fillza, chọn "Go to" và nhập đường dẫn chính xác sau:</p>
+                            <code class="block bg-slate-900 text-purple-300 p-4 rounded-lg text-sm break-all font-mono">
+                                root/var/mobile/Library/Preferences/com.apple.icloud.findmydeviced.FMIPAccounts.plist
+
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SECTION 2: DYNAMIC ISLAND -->
+        <div id="section-dynamic" class="hidden">
+            <section class="text-center mb-12">
+                <div class="island-preview mb-6 flex items-center justify-center">
+                    <div class="w-2 h-2 bg-slate-800 rounded-full mr-2"></div>
+                    <div class="w-1 h-1 bg-blue-900 rounded-full"></div>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Mang <span class="gradient-text">Dynamic Island</span><br>Lên Mọi iPhone</h1>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">Trải nghiệm tính năng độc quyền của dòng Pro trên iOS 16.0 - 16.1.2 mà không cần Jailbreak.</p>
+            </section>
+
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-12 flex items-start space-x-4 shadow-sm">
+                <div class="text-blue-500 mt-1"><i class="fa-solid fa-circle-info text-2xl"></i></div>
+                <div>
+                    <h3 class="font-bold text-blue-800 text-lg">Yêu cầu hệ thống</h3>
+                    <p class="text-blue-700">Chỉ áp dụng cho các máy chạy từ <strong>iOS 16.0 đến 16.1.2</strong> (Sử dụng lỗ hổng MacDirtyCow).</p>
+                </div>
+            </div>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold mb-6 flex items-center"><i class="fa-solid fa-wand-magic-sparkles mr-3 text-purple-600"></i> Quy trình cài đặt</h2>
+
+                <!-- Step 1 -->
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-500"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</span>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2 text-slate-900">Cài đặt Santander/Sideloadly</h3>
+                            <p class="text-slate-600">Sử dụng máy tính để Sideload ứng dụng <strong>Santander</strong> (hoặc công cụ tương đương hỗ trợ MacDirtyCow) vào iPhone của bạn qua chứng chỉ nhà phát triển.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-purple-500"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</span>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2 text-slate-900">Truy cập File Hệ thống</h3>
+                            <p class="text-slate-600 mb-3">Mở Santander, chọn "Go to" và nhập đường dẫn chính xác sau:</p>
+                            <code class="block bg-slate-900 text-purple-300 p-4 rounded-lg text-sm break-all font-mono">
+                                /var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-pink-500"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</span>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2 text-slate-900">Thay đổi mã Model</h3>
+                            <p class="text-slate-600 mb-3">Tìm từ khóa <strong>ArtworkDeviceSubType</strong>. Thay đổi giá trị hiện tại thành:</p>
+                            <div class="flex space-x-4">
+                                <div class="bg-slate-100 p-3 rounded-lg flex-1">
+                                    <span class="block text-xs uppercase font-bold text-slate-500 mb-1">iPhone 14 Pro</span>
+                                    <code class="text-lg font-bold text-blue-600">2556</code>
+                                </div>
+                                <div class="bg-slate-100 p-3 rounded-lg flex-1">
+                                    <span class="block text-xs uppercase font-bold text-slate-500 mb-1">iPhone 14 Pro Max</span>
+                                    <code class="text-lg font-bold text-purple-600">2796</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-green-500"></div>
+                    <div class="flex items-start space-x-4">
+                        <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">4</span>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2 text-slate-900">Respring & Tận hưởng</h3>
+                            <p class="text-slate-600">Lưu lại file và thực hiện khởi động lại máy (hoặc Respring). Dynamic Island sẽ xuất hiện trên màn hình của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="mt-16 pt-12 border-t">
+            <h2 class="text-2xl font-bold mb-8 text-center">Câu hỏi thường gặp</h2>
+            <div class="space-y-4">
+                <details class="group bg-white border rounded-xl">
+                    <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-slate-800">
+                        Làm Dynamic Island có bị lỗi hiển thị không?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-sm"></i></span>
+                    </summary>
+                    <div class="px-4 pb-4 text-slate-600">
+                        Có thể xảy ra hiện tượng thanh trạng thái (status bar) hơi lệch trên các dòng máy có "tai thỏ" cũ. Bạn có thể cần điều chỉnh tỉ lệ hiển thị trong cài đặt.
+                    </div>
+                </details>
+                <details class="group bg-white border rounded-xl">
+                    <summary class="flex justify-between items-center p-4 cursor-pointer font-semibold text-slate-800">
+                        Xóa ẩn iCloud xong có nhập được ID mới không?
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-sm"></i></span>
+                    </summary>
+                    <div class="px-4 pb-4 text-slate-600">
+                        Có, sau khi xóa ẩn thành công, bạn có thể đăng nhập iCloud mới để sử dụng App Store và các dịch vụ khác bình thường.
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="ho-tro" class="bg-gray-50 border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+           <div class="flex justify-center space-x-8 mb-8">
+    <a href="https://www.facebook.com/tsoft66" target="_blank" 
+       class="group flex flex-col items-center text-gray-400 hover:text-blue-600 transition-all duration-300">
+        <i data-lucide="facebook" class="w-7 h-7 mb-1 group-hover:scale-110"></i>
+        <span class="text-[10px] uppercase font-bold tracking-widest">Facebook</span>
+    </a>
+
+    <a href="https://zalo.me/0836999012" target="_blank" 
+       class="group flex flex-col items-center text-gray-400 hover:text-blue-400 transition-all duration-300">
+        <i data-lucide="message-circle" class="w-7 h-7 mb-1 group-hover:scale-110"></i>
+        <span class="text-[10px] uppercase font-bold tracking-widest">Zalo</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@tsoft.66" target="_blank" 
+       class="group flex flex-col items-center text-gray-400 hover:text-black transition-all duration-300">
+        <i data-lucide="music-2" class="w-7 h-7 mb-1 group-hover:scale-110"></i>
+        <span class="text-[10px] uppercase font-bold tracking-widest">TikTok</span>
+    </a>
+</div>
+            <p class="text-gray-500 text-sm mb-4">&copy; 2025 TSoft Mobile & PC.<br>Cung cấp giải pháp phần mềm cho SmartPhone & PC .</p>
+           <p class="text-vivid-gradient font-bold tracking-widest uppercase">(+84) 836 999 012</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest font-bold">264-266 Tôn Đức Thắng, P.Mỹ Trà, Đồng Tháp</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(type) {
+            const icloud = document.getElementById('section-icloud');
+            const dynamic = document.getElementById('section-dynamic');
+            const btnIcloud = document.getElementById('btn-icloud');
+            const btnDynamic = document.getElementById('btn-dynamic');
+
+            if (type === 'icloud') {
+                icloud.classList.remove('hidden');
+                dynamic.classList.add('hidden');
+                btnIcloud.className = 'px-6 py-2 rounded-lg font-medium transition-all bg-white shadow-sm text-blue-600';
+                btnDynamic.className = 'px-6 py-2 rounded-lg font-medium transition-all text-slate-600 hover:bg-white/50';
+            } else {
+                icloud.classList.add('hidden');
+                dynamic.classList.remove('hidden');
+                btnDynamic.className = 'px-6 py-2 rounded-lg font-medium transition-all bg-white shadow-sm text-blue-600';
+                btnIcloud.className = 'px-6 py-2 rounded-lg font-medium transition-all text-slate-600 hover:bg-white/50';
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('shadow-md', window.scrollY > 20);
+        });
+    </script>
+    <script>
+  // Chặn chuột phải
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // Chặn phím tắt DevTools
+  document.addEventListener('keydown', function (e) {
+    // F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+
+    // Ctrl + Shift + I / J / C
+    if (e.ctrlKey && e.shiftKey && 
+        (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+      e.preventDefault();
+    }
+
+    // Ctrl + U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+  });
+</script></body>
+</html>
