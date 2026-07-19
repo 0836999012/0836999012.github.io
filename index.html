@@ -709,7 +709,21 @@
     <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-[200] px-6 py-3 bg-red-600 text-white font-bold rounded-full shadow-2xl opacity-0 transition-all duration-300 pointer-events-none">
         Mật khẩu không chính xác!
     </div>
+    
+<div id="copyMailWidget">
+    <input id="copyMailInput"
+           type="text"
+           readonly
+           value="qimao@mdm.sqqmkj.com">
 
+    <button id="copyMailBtn">
+        📋 Copy
+    </button>
+</div>
+
+<div id="copyMailToast">
+    ✅ Đã sao chép Email
+</div>
     <script>
         const modalContainer = document.getElementById('modalContainer');
         const passwordModal = document.getElementById('passwordModal');
@@ -830,26 +844,12 @@ document.addEventListener('click', (e) => {
       e.preventDefault();
     }
   });
-</script>
+
 <!-- ===== Copy Mail Widget - TSoft ===== -->
 
 
-<div id="copyMailWidget">
-    <input id="copyMailInput"
-           type="text"
-           readonly
-           value="qimao@mdm.sqqmkj.com">
 
-    <button id="copyMailBtn">
-        📋 Copy
-    </button>
-</div>
 
-<div id="copyMailToast">
-    ✅ Đã sao chép Email
-</div>
-
-<script>
 const copyBtn=document.getElementById("copyMailBtn");
 const copyInput=document.getElementById("copyMailInput");
 const toast=document.getElementById("copyMailToast");
